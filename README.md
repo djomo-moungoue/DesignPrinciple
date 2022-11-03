@@ -49,21 +49,21 @@ soit une `requête qui renvoie des données` à l'appelant, mais pas les deux.
 ~~~
 
 # [SOLID : Coding in Python](https://towardsdatascience.com/solid-coding-in-python-1281392a6a94)
-[Source supplémentaire](https://www.geeksforgeeks.org/solid-principle-in-programming-understand-with-real-life-examples/?ref=gcse)
 
 Habituellement, les principes SOLID sont appliqués dans le contexte de la conception orientée objet (par exemple, 
 les classes de Python). Les principes de `SOLID` sont les suivants :
-- [ ] `SRP` : The Single-Responsibility Principle - le principe de responsabilité unique
+- [x] `SRP` : The Single-Responsibility Principle - le principe de responsabilité unique
   - Ce principe stipule qu'**"une `classe` ne doit avoir qu'une seule raison de changer"**.
   - En d'autres termes, chaque composant de votre code (en général une classe, mais aussi une fonction) doit avoir une 
     et une seule responsabilité. En conséquence, il ne devrait y avoir qu'une seule raison de le modifier.
-  - Exemple :  
 - [ ] `OCP` : The Open-Closed Principle - Le principe de l'ouverture et de la fermeture
   - Ce principe stipule que **"les `entités logicielles` (classes, modules, fonctions, etc.) doivent être ouvertes à 
     l'extension, mais fermées à la modification"**
   - En d'autres termes : Vous ne devriez pas avoir à modifier le code que vous avez déjà écrit pour accueillir une 
   nouvelle fonctionnalité, mais simplement ajouter ce dont vous avez maintenant besoin.
-  - Exemple :  
+  - Cela ne signifie pas que vous ne pouvez pas modifier votre code lorsque les prémisses du code doivent être modifiées, 
+    mais que si vous devez ajouter de nouvelles fonctions similaires à celle qui est présente, vous ne devriez pas avoir 
+    besoin de modifier d'autres parties du code.
 - [ ] `LSP` : The Liskov Substitution Principle - le principe de substitution de Liskov
   - Selon ce principe "Les `classes dérivées ou enfants` doivent être substituables à leurs classes de base ou parents". 
   - Ce principe garantit que toute classe qui est l'enfant d'une classe parent doit pouvoir être utilisée à la place de 
@@ -83,15 +83,7 @@ les classes de Python). Les principes de `SOLID` sont les suivants :
   - Ce principe stipule que :
     + "Les modules/classes de haut niveau ne devraient pas dépendre des modules/classes de bas niveau. Les deux doivent 
       dépendre d'abstractions".
-    + "Les abstractions ne doivent pas dépendre des détails. Les détails doivent dépendre des abstractions." 
-+ Python : Good Example
-~~~python
-
-~~~
-+ Python : Bad Example
-~~~python
-
-~~~
+    + "Les abstractions ne doivent pas dépendre des détails. Les détails doivent dépendre des abstractions."
 
 # [YAGNI : You Ain't Gonna Need It](https://medium.com/@derodu/design-patterns-kiss-dry-tda-yagni-soc-828c112b89ee)
 + Ce principe ne nous dit pas comment faire quelque chose en code directement, mais plutôt comment coder efficacement.
