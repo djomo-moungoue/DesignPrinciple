@@ -21,11 +21,25 @@ les classes de Python). Le principe de `SOLID` est composé des 5 principes suiv
     mais que si vous devez ajouter de nouvelles fonctions similaires à celle qui est présente, vous ne devriez pas avoir 
     besoin de modifier d'autres parties du code.
   - Le résultat est une classe très `flexible`, dont l'entretien nécessite un minimum de temps. 
-- [ ] `LSP` : The Liskov Substitution Principle - le principe de substitution de Liskov
-  - Selon ce principe "Les `classes dérivées ou enfants` doivent être substituables à leurs classes de base ou parents". 
-  - Ce principe garantit que toute classe qui est l'enfant d'une classe parent doit pouvoir être utilisée à la place de 
-    son parent sans comportement inattendu. 
-  - **Exemple** : [parent Rectangle] <-- [enfant Carré] 
+- [x] `LSP` : The Liskov Substitution Principle - le principe de substitution de Liskov
+  - Ce principe stipule que : "Les fonctions qui utilisent des pointeurs ou des références à des classes de base 
+    doivent pouvoir utiliser des objets de classes dérivées sans le savoir".
+  - En d'autres termes : "Les classes dérivées doivent être substituables à leurs classes de base".
+  - En termes plus simples, si une sous-classe redéfinit une fonction également présente dans la classe parente, 
+    un client-utilisateur ne devrait pas remarquer de différence de comportement, et elle est un substitut de la classe 
+    de base.
+  - Par exemple, si vous utilisez une fonction et que votre collègue change la classe de base, vous ne devriez pas 
+    remarquer de différence dans la fonction que vous utilisez.
+  - C'est le principe le plus abscons à comprendre et à expliquer parmi tous les principes SOLID. Par conséquent, il 
+    n'existe pas de solution standard de type "modèle" où il doit être appliqué, et il est difficile de proposer un 
+    **exemple standard** à présenter.
+  - Dans l'exemple `solidprincipleza.py`, la méthode `do_operation_za` est présente dans les sous-classes `MeanZa`, 
+    `MaxZa`, `MedianZa` et dans la classe de base OperationZa. L'utilisateur final doit s'attendre au même comportement 
+    de la part de ces deux classes.
+  - Le résultat de ce principe est que nous écrirons notre code d'une manière cohérente et, l'utilisateur final n'aura 
+    besoin d'apprendre comment notre code fonctionne, qu'une seule fois.
+  - Une conséquence de LSP est que : la nouvelle fonction redéfinie dans la sous-classe devrait être valide et pouvoir 
+    être utilisée partout où la même fonction dans la classe parente est utilisée.
 - [ ] `ISP` : The Interface Segregation Principle - Le principe de ségrégation d'interface
   - Elle stipule que "ne pas forcer un client à mettre en œuvre une interface qui n'est pas pertinente pour lui". 
   - Ici, votre objectif principal est d'éviter les interfaces trop lourdes et de donner la préférence à de nombreuses 
