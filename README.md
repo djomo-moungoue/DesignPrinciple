@@ -7,7 +7,7 @@ les classes de Python). Le principe de `SOLID` est composé des 5 principes suiv
   - Ce principe stipule qu'**"une `classe` ne doit avoir qu'une seule raison de changer"**.
   - En d'autres termes, chaque composant de votre code (en général une classe, mais aussi une fonction) doit avoir une 
     et une seule responsabilité. En conséquence, il ne devrait y avoir qu'une seule raison de le modifier.
-- [ ] `OCP` : The Open-Closed Principle - Le principe de l'ouverture et de la fermeture
+- [x] `OCP` : The Open-Closed Principle - Le principe de l'ouverture et de la fermeture
   - Ce principe stipule que **"les `entités logicielles` (classes, modules, fonctions, etc.) doivent être ouvertes à 
     l'extension, mais fermées à la modification"**
   - En d'autres termes : Vous ne devriez pas avoir à modifier le code que vous avez déjà écrit pour accueillir une 
