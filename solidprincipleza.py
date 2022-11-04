@@ -63,7 +63,7 @@ class OperationZa(ABC):
         """
         Implémenter ceci pour effectuer un calcul mathématique.
         """
-        pass
+        raise NotImplementedError("Vous devriez implémenter cette méthode pour effectuer un calcul mathématique.")
 
 
 class MeanZa(OperationZa):
@@ -71,7 +71,10 @@ class MeanZa(OperationZa):
     Calcule la moyenne des éléments d'une séquence.
     """
 
-    def do_operation_za(self, list_za):
+    def __init__(self):
+        LogZa.log_za(f"Constructeur de MeanZa")
+
+    def do_operation_za(self, list_za: list):
         LogZa.log_za(f"La moyenne est : {np.mean(list_za)}")
 
 
@@ -80,7 +83,10 @@ class MaxZa(OperationZa):
     Détermine le maximum parmi les éléments d'une séquence.
     """
 
-    def do_operation_za(self, list_za):
+    def __init__(self):
+        LogZa.log_za(f"Constructeur de MaxZa")
+
+    def do_operation_za(self, list_za: list):
         LogZa.log_za(f"Le maximum est : {np.max(list_za)}")
 
 
@@ -91,20 +97,39 @@ class MainZa:
 
     @abstractmethod
     def get_operations_za(self, list_za: list):
-        # __subclasses__ trouvera toutes les enfants d'OperationZa
-        for operation in OperationZa.__subclasses__():
-            operation.do_operation_za(list_za)
+        LogZa.log_za(f"La sous-classes :{OperationZa.__subclasses__()}")
+        # La sous-classes :[<class '__main__.MeanZa'>, <class '__main__.MaxZa'>]
+        for operation_za in OperationZa.__subclasses__():
+            LogZa.log_za(f"La classe :{operation_za}")
+            # La classe :<class '__main__.MeanZa'>
+            # La classe :<class '__main__.MaxZa'>
+            LogZa.log_za(f"L'object :{operation_za()}")
+            # L'object :<__main__.MeanZa object at 0x00000196073B7520>
+            # L'object :<__main__.MaxZa object at 0x00000196073B7520>
+            operation_za().do_operation_za(list_za)
+
+    @abstractmethod
+    def get_one_operation_za(self, list_za: list, operation_za: OperationZa):
+        if OperationZa.__subclasscheck__(operation_za):
+            operation_za().do_operation_za(list_za)
 
 
 """
 ----------------------MAIN------------------
 """
 if __name__ == "__main__":
+    print()
     LogZa.log_za("Mauvaise pratique, parce SRP n'est pas respecté dans la fonction do_math_operations_za")
     do_math_operations_za([3, 5, 11, 7, 1])
 
+    print()
     LogZa.log_za("Mauvaise pratique, parce OCP n'est pas respecté dans la fonction main_za")
     main_za([3, 5, 11, 7, 1])
 
+    print()
     LogZa.log_za("Mauvaise pratique, parce OCP n'est pas respecté dans la fonction main_za")
-    MainZa.get_operations_za([3, 5, 11, 7, 1])
+    main_za = MainZa()
+    print("--------Effectuer toutes opérations------------")
+    main_za.get_operations_za([3, 5, 11, 7, 1])
+    print("--------Effectuer une opération spécifique------------")
+    main_za.get_one_operation_za([3, 5, 11, 7, 1], MeanZa)
