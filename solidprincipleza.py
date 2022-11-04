@@ -89,6 +89,7 @@ class MaxZa(OperationZa):
     def do_operation_za(self, list_za: list):
         LogZa.log_za(f"Le maximum est : {np.max(list_za)}")
 
+
 class MedianZa(OperationZa):
     """
     Détermine le médiane parmi les éléments d'une séquence.
@@ -126,6 +127,70 @@ class MainZa:
 
 
 """
+--------------------------ISP blessé : Mauvaise pratique--------------------------
+"""
+
+
+class MammalsZa(ABC):
+    @abstractmethod
+    def swim(self) -> None:
+        print("Can Swim")
+
+    @abstractmethod
+    def walk(self) -> None:
+        print("Can Walk")
+
+
+class HumanZa(MammalsZa):
+
+    def swim(self) -> None:
+        print("Humans can swim")
+
+    def walk(self) -> None:
+        print("Humans can walk")
+
+
+class WhaleZa(MammalsZa):
+
+    def swim(self) -> None:
+      print("Whales can swim")
+
+
+"""
+--------------------------ISP respecté : Bonne pratique--------------------------
+"""
+
+
+class SwimmerZo(ABC):
+
+    @abstractmethod
+    def swim(self) -> None:
+        print("Can Swim")
+
+
+class WalkerZo(ABC):
+
+    @abstractmethod
+    def walk(self) -> None:
+        print("Can Walk")
+
+
+class HumanZo(SwimmerZo, WalkerZo):
+
+    def swim(self) -> None:
+        print("Humans can swim")
+
+    def walk(self) -> None:
+        print("Humans can walk")
+
+
+class WhaleZo(SwimmerZo):
+
+    def swim(self) -> None:
+        print("Whales can swim")
+
+
+"""
 ----------------------MAIN------------------
 """
 if __name__ == "__main__":
@@ -144,5 +209,22 @@ if __name__ == "__main__":
     main_za.get_operations_za([3, 5, 11, 7, 1])
     print("--------Effectuer une opération spécifique------------")
     main_za.get_one_operation_za([3, 5, 11, 7, 1], MeanZa)
-    print("+++++Extension de OperationZa, avec le calcul de la médiane, sans necessité de modifier un partie du code déjà implémenté+++++++++")
+    print(
+        "+++++Extension de OperationZa, avec le calcul de la médiane, sans necessité de modifier un partie du code déjà implémenté+++++++++")
     main_za.get_one_operation_za([3, 5, 11, 7, 1], MedianZa)
+    print()
+    LogZa.log_za("------------ISP blessé : Mauvaise pratique----------------")
+    human_za = HumanZa()
+    whale_za = WhaleZa()
+    human_za.swim()
+    human_za.walk()
+    whale_za.swim()
+    #whale_za.walk()
+    # TypeError: Can't instantiate abstract class WhaleZa with abstract method walk
+    LogZa.log_za("++++++++++++ISP respecté : Bonne pratique++++++++++++++++")
+    human_zo = HumanZo()
+    whale_zo = WhaleZo()
+    human_zo.swim()
+    human_zo.walk()
+    whale_zo.swim()
+    whale_zo.walk()

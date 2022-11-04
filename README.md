@@ -12,6 +12,7 @@ les classes de Python). Le principe de `SOLID` est composé des 5 principes suiv
   - Ce principe stipule qu'**"une `classe` ne doit avoir qu'une seule raison de changer"**.
   - En d'autres termes, chaque composant de votre code (en général une classe, mais aussi une fonction) doit avoir une 
     et une seule responsabilité. En conséquence, il ne devrait y avoir qu'une seule raison de le modifier.
+  - Exemple : solidprincipleza.py 
 - [x] `OCP` : The Open-Closed Principle - Le principe de l'ouverture et de la fermeture
   - Ce principe stipule que **"les `entités logicielles` (classes, modules, fonctions, etc.) doivent être ouvertes à 
     l'extension, mais fermées à la modification"**
@@ -21,6 +22,7 @@ les classes de Python). Le principe de `SOLID` est composé des 5 principes suiv
     mais que si vous devez ajouter de nouvelles fonctions similaires à celle qui est présente, vous ne devriez pas avoir 
     besoin de modifier d'autres parties du code.
   - Le résultat est une classe très `flexible`, dont l'entretien nécessite un minimum de temps. 
+  - Exemple : solidprincipleza.py  
 - [x] `LSP` : The Liskov Substitution Principle - le principe de substitution de Liskov
   - Ce principe stipule que : "Les fonctions qui utilisent des pointeurs ou des références à des classes de base 
     doivent pouvoir utiliser des objets de classes dérivées sans le savoir".
@@ -40,21 +42,20 @@ les classes de Python). Le principe de `SOLID` est composé des 5 principes suiv
     besoin d'apprendre comment notre code fonctionne, qu'une seule fois.
   - Une conséquence de LSP est que : la nouvelle fonction redéfinie dans la sous-classe devrait être valide et pouvoir 
     être utilisée partout où la même fonction dans la classe parente est utilisée.
-- [ ] `ISP` : The Interface Segregation Principle - Le principe de ségrégation d'interface
-  - Elle stipule que "ne pas forcer un client à mettre en œuvre une interface qui n'est pas pertinente pour lui". 
-  - Ici, votre objectif principal est d'éviter les interfaces trop lourdes et de donner la préférence à de nombreuses 
-    petites interfaces spécifiques au client. 
-  - Vous devriez préférer de nombreuses interfaces client plutôt qu'une interface générale et chaque interface devrait 
-    avoir une responsabilité spécifique. 
-  - L'utilisation de ce principe permet de réduire les effets secondaires et la fréquence des changements nécessaires. 
-  - **Exemple** : Un végétarien qui entre dans un restaurant aimerait avoir une carte de menu comprenant uniquement des 
-    repas végétariens et une carte de menu contenant les repas végétariens et des repas non-végétariens, par ce qu'il
-    n'a pas du tout besoin de savoir le repas non végétarien au menu. 
+- [x] `ISP` : The Interface Segregation Principle - Le principe de ségrégation d'interface
+  - Ce principe stipule que : "De nombreuses interfaces spécifiques au client sont meilleures qu'une interface générale".
+  - Dans le concours des classes, on considère une interface, toutes les méthodes et propriétés "exposées", donc, 
+    tout ce avec quoi un utilisateur peut interagir qui appartient à cette classe.
+  - Dans ce sens, les principes de ségrégation d'interface (ISP) nous disent qu'une classe ne doit avoir que l'interface 
+    nécessaire (SRP) et éviter les méthodes qui n'ont aucune raison de faire partie de cette classe.
+  - Ce problème se pose principalement lorsqu'une sous-classe hérite de méthodes d'une classe de base dont elle n'a pas besoin.
+  - Exemple : solidprincipleza.py  
 - [ ] `DiP` : The Dependency inversion Principle - Le principe d'inversion de dépendance
   - Ce principe stipule que :
     + "Les modules/classes de haut niveau ne devraient pas dépendre des modules/classes de bas niveau. Les deux doivent 
       dépendre d'abstractions".
     + "Les abstractions ne doivent pas dépendre des détails. Les détails doivent dépendre des abstractions."
+  - Exemple : solidprincipleza.py  
 
 # [CQS : Command Query Seperation](https://en.wikipedia.org/wiki/Command%E2%80%93query_separation)
 Le principe de séparation commande-requête stipule que chaque méthode doit être soit une `commande qui exécute une action`, 
