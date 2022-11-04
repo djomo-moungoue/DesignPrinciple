@@ -6,8 +6,10 @@
   - Merci d'avance !
 
 # SOLID(SRP, OCP, LSP, ISP, DIP)
-Habituellement, les principes SOLID sont appliqués dans le contexte de la conception orientée objet (par exemple, 
-les classes de Python). Le principe de `SOLID` est composé des 5 principes suivants :
++ SOLID est l'acronyme des cinq premiers principes de la conception orientée objet créés par Robert C. Martin. 
++ Ces principes nous aident à développer des logiciels qui peuvent être maintenus et étendus tout au long de leur durée de vie. 
++ Pour ce faire, les principes SOLID permettent d'éviter les odeurs de code, de refactoriser le code et d'appliquer le 
+  développement logiciel agile.
 
 ## Résumé
 - [x] SRP (Single Responsibility Principle) : "Une classe devrait avoir une, et une seule, raison de changer".
@@ -112,6 +114,8 @@ soit une `requête qui renvoie des données` à l'appelant, mais pas les deux.
 + SOLID : 
   + SOLID Coding in Python : https://towardsdatascience.com/solid-coding-in-python-1281392a6a94
   + The Principles of OOD : http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod
+  + SOLID Python part 4 (Liskov Substitution Principle) : https://codingwithjohan.com/blog/solid-python-liskov-substitution-principle
+  + SOLID Python part 6 (Dependency Inversion Principle) : https://codingwithjohan.com/blog/solid-python-dependency-inversion-principle 
 + CQS : https://en.wikipedia.org/wiki/Command%E2%80%93query_separation
 + DRY : 
   + https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
