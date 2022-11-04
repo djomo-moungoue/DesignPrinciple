@@ -1,33 +1,8 @@
 `Python : Exemples illustrant l'application des principes de conception`
 
-# [CQS : Command Query Seperation](https://en.wikipedia.org/wiki/Command%E2%80%93query_separation)
-Le principe de séparation commande-requête stipule que chaque méthode doit être soit une `commande qui exécute une action`, 
-soit une `requête qui renvoie des données` à l'appelant, mais pas les deux.
-
-# [DRY : Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
-+ Le principe DRY stipule que "chaque élément de connaissance doit avoir une représentation unique, non ambiguë et
-  faisant autorité au sein d'un système".
-+ "Don't repeat yourself" (DRY) est un principe de développement logiciel visant à réduire la répétition des patrons
-  logiciels, en les remplaçant par des abstractions ou en utilisant la normalisation des données pour éviter la redondance.
-+ [Bon et mauvais exemple](https://medium.com/@derodu/design-patterns-kiss-dry-tda-yagni-soc-828c112b89ee)
-
-# KISS : Keep It Simple Stupid
-+ Le principe KISS stipule que chaque `méthode`, `classe`, `interface` doit avoir un nom aussi clair que possible et que
-  la logique à l'intérieur des fonctions, des méthodes, etc. doit être aussi claire et simple que possible.
-+ le principe KISS s'implémente soit :
-  + soit via l'`héritage` des attributs, des méthodes de la classe de base
-  + soit via la `composition`
-+ [Bon et mauvais exemple](https://medium.com/@derodu/design-patterns-kiss-dry-tda-yagni-soc-828c112b89ee)
-
-# [SoC : Separation of Concern](https://medium.com/@derodu/design-patterns-kiss-dry-tda-yagni-soc-828c112b89ee)
-+ Ce principe nous dit de séparer la responsabilité d'une seule classe à cette classe et à cette classe seulement.
-+ Les objets ne doivent pas partager ce qu'ils font.
-+ Chaque classe doit être unique et séparée des autres.
-
 # [SOLID : Coding in Python](https://towardsdatascience.com/solid-coding-in-python-1281392a6a94)
-
 Habituellement, les principes SOLID sont appliqués dans le contexte de la conception orientée objet (par exemple, 
-les classes de Python). Les principes de `SOLID` sont les suivants :
+les classes de Python). Le principe de `SOLID` est composé des 5 principes suivants :
 - [x] `SRP` : The Single-Responsibility Principle - le principe de responsabilité unique
   - Ce principe stipule qu'**"une `classe` ne doit avoir qu'une seule raison de changer"**.
   - En d'autres termes, chaque composant de votre code (en général une classe, mais aussi une fonction) doit avoir une 
@@ -60,6 +35,30 @@ les classes de Python). Les principes de `SOLID` sont les suivants :
     + "Les modules/classes de haut niveau ne devraient pas dépendre des modules/classes de bas niveau. Les deux doivent 
       dépendre d'abstractions".
     + "Les abstractions ne doivent pas dépendre des détails. Les détails doivent dépendre des abstractions."
+
+# [CQS : Command Query Seperation](https://en.wikipedia.org/wiki/Command%E2%80%93query_separation)
+Le principe de séparation commande-requête stipule que chaque méthode doit être soit une `commande qui exécute une action`, 
+soit une `requête qui renvoie des données` à l'appelant, mais pas les deux.
+
+# [DRY : Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
++ Le principe DRY stipule que "chaque élément de connaissance doit avoir une représentation unique, non ambiguë et
+  faisant autorité au sein d'un système".
++ "Don't repeat yourself" (DRY) est un principe de développement logiciel visant à réduire la répétition des patrons
+  logiciels, en les remplaçant par des abstractions ou en utilisant la normalisation des données pour éviter la redondance.
++ [Bon et mauvais exemple](https://medium.com/@derodu/design-patterns-kiss-dry-tda-yagni-soc-828c112b89ee)
+
+# KISS : Keep It Simple Stupid
++ Le principe KISS stipule que chaque `méthode`, `classe`, `interface` doit avoir un nom aussi clair que possible et que
+  la logique à l'intérieur des fonctions, des méthodes, etc. doit être aussi claire et simple que possible.
++ le principe KISS s'implémente soit :
+  + soit via l'`héritage` des attributs, des méthodes de la classe de base
+  + soit via la `composition`
++ [Bon et mauvais exemple](https://medium.com/@derodu/design-patterns-kiss-dry-tda-yagni-soc-828c112b89ee)
+
+# [SoC : Separation of Concern](https://medium.com/@derodu/design-patterns-kiss-dry-tda-yagni-soc-828c112b89ee)
++ Ce principe nous dit de séparer la responsabilité d'une seule classe à cette classe et à cette classe seulement.
++ Les objets ne doivent pas partager ce qu'ils font.
++ Chaque classe doit être unique et séparée des autres.
 
 # [YAGNI : You Ain't Gonna Need It](https://medium.com/@derodu/design-patterns-kiss-dry-tda-yagni-soc-828c112b89ee)
 + Ce principe ne nous dit pas comment faire quelque chose en code directement, mais plutôt comment coder efficacement.
