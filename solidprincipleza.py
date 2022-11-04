@@ -89,6 +89,17 @@ class MaxZa(OperationZa):
     def do_operation_za(self, list_za: list):
         LogZa.log_za(f"Le maximum est : {np.max(list_za)}")
 
+class MedianZa(OperationZa):
+    """
+    Détermine le médiane parmi les éléments d'une séquence.
+    """
+
+    def __init__(self):
+        LogZa.log_za(f"Constructeur de MedianZa")
+
+    def do_operation_za(self, list_za: list):
+        LogZa.log_za(f"La médiane est : {np.median(list_za)}")
+
 
 class MainZa:
     """
@@ -133,3 +144,5 @@ if __name__ == "__main__":
     main_za.get_operations_za([3, 5, 11, 7, 1])
     print("--------Effectuer une opération spécifique------------")
     main_za.get_one_operation_za([3, 5, 11, 7, 1], MeanZa)
+    print("+++++Extension de OperationZa, avec le calcul de la médiane, sans necessité de modifier le code déjà implémenté+++++++++")
+    main_za.get_one_operation_za([3, 5, 11, 7, 1], MedianZa)
