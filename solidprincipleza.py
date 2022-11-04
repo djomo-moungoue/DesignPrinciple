@@ -49,7 +49,7 @@ def main_za(list_za: list):
 
 
 """
---------------------------SRP + OCP--------------------------
+--------------------------SRP + OCP respectés : Bonne pratique--------------------------
 """
 
 
@@ -153,7 +153,10 @@ class HumanZa(MammalsZa):
 class WhaleZa(MammalsZa):
 
     def swim(self) -> None:
-      print("Whales can swim")
+        print("Whales can swim")
+
+    def walk(self) -> None:  # Caractère de remplacement afin d'éviter TypeError : abstract class ...
+        pass
 
 
 """
@@ -203,14 +206,13 @@ if __name__ == "__main__":
     main_za([3, 5, 11, 7, 1])
 
     print()
-    LogZa.log_za("Mauvaise pratique, parce OCP n'est pas respecté dans la fonction main_za")
+    LogZa.log_za("Bonne pratique, parce OCP est respecté dans la fonction main_za")
     main_za = MainZa()
     print("--------Effectuer toutes opérations------------")
     main_za.get_operations_za([3, 5, 11, 7, 1])
     print("--------Effectuer une opération spécifique------------")
     main_za.get_one_operation_za([3, 5, 11, 7, 1], MeanZa)
-    print(
-        "+++++Extension de OperationZa, avec le calcul de la médiane, sans necessité de modifier un partie du code déjà implémenté+++++++++")
+    print("+++++Extension de OperationZa, avec le calcul de la médiane, sans necessité de modifier un partie du code déjà implémenté+++++++++")
     main_za.get_one_operation_za([3, 5, 11, 7, 1], MedianZa)
     print()
     LogZa.log_za("------------ISP blessé : Mauvaise pratique----------------")
@@ -219,12 +221,13 @@ if __name__ == "__main__":
     human_za.swim()
     human_za.walk()
     whale_za.swim()
-    #whale_za.walk()
+    whale_za.walk()
     # TypeError: Can't instantiate abstract class WhaleZa with abstract method walk
+    # WhaleZa est considéré une classe abstraite, parce qu'elle n'avait pas implémenté la méthode abstraite walk.
+    #
     LogZa.log_za("++++++++++++ISP respecté : Bonne pratique++++++++++++++++")
     human_zo = HumanZo()
     whale_zo = WhaleZo()
     human_zo.swim()
     human_zo.walk()
     whale_zo.swim()
-    whale_zo.walk()
