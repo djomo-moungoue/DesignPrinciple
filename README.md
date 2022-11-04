@@ -5,7 +5,7 @@
   - Tout `commentaire constructif` est le bien venu, parce que Rome n'a été construit en un seul jour. 
   - Merci d'avance !
 
-# [SOLID : Coding in Python](https://towardsdatascience.com/solid-coding-in-python-1281392a6a94)
+# SOLID(SRP, OCP, LSP, ISP, DiP)
 Habituellement, les principes SOLID sont appliqués dans le contexte de la conception orientée objet (par exemple, 
 les classes de Python). Le principe de `SOLID` est composé des 5 principes suivants :
 - [x] `SRP` : The Single-Responsibility Principle - le principe de responsabilité unique
@@ -57,16 +57,15 @@ les classes de Python). Le principe de `SOLID` est composé des 5 principes suiv
     + "Les abstractions ne doivent pas dépendre des détails. Les détails doivent dépendre des abstractions."
   - Exemple : solidprincipleza.py  
 
-# [CQS : Command Query Seperation](https://en.wikipedia.org/wiki/Command%E2%80%93query_separation)
+# CQS : Command Query Seperation
 Le principe de séparation commande-requête stipule que chaque méthode doit être soit une `commande qui exécute une action`, 
 soit une `requête qui renvoie des données` à l'appelant, mais pas les deux.
 
-# [DRY : Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
+# DRY : Don't Repeat Yourself
 + Le principe DRY stipule que "chaque élément de connaissance doit avoir une représentation unique, non ambiguë et
   faisant autorité au sein d'un système".
 + "Don't repeat yourself" (DRY) est un principe de développement logiciel visant à réduire la répétition des patrons
   logiciels, en les remplaçant par des abstractions ou en utilisant la normalisation des données pour éviter la redondance.
-+ [Bon et mauvais exemple](https://medium.com/@derodu/design-patterns-kiss-dry-tda-yagni-soc-828c112b89ee)
 
 # KISS : Keep It Simple Stupid
 + Le principe KISS stipule que chaque `méthode`, `classe`, `interface` doit avoir un nom aussi clair que possible et que
@@ -74,14 +73,13 @@ soit une `requête qui renvoie des données` à l'appelant, mais pas les deux.
 + le principe KISS s'implémente soit :
   + soit via l'`héritage` des attributs, des méthodes de la classe de base
   + soit via la `composition`
-+ [Bon et mauvais exemple](https://medium.com/@derodu/design-patterns-kiss-dry-tda-yagni-soc-828c112b89ee)
 
-# [SoC : Separation of Concern](https://medium.com/@derodu/design-patterns-kiss-dry-tda-yagni-soc-828c112b89ee)
+# SoC : Separation of Concern
 + Ce principe nous dit de séparer la responsabilité d'une seule classe à cette classe et à cette classe seulement.
 + Les objets ne doivent pas partager ce qu'ils font.
 + Chaque classe doit être unique et séparée des autres.
 
-# [YAGNI : You Ain't Gonna Need It](https://medium.com/@derodu/design-patterns-kiss-dry-tda-yagni-soc-828c112b89ee)
+# YAGNI : You Ain't Gonna Need It
 + Ce principe ne nous dit pas comment faire quelque chose en code directement, mais plutôt comment coder efficacement.
 + En général, il dit que nous ne devons coder que les choses qui nous sont demandées à ce moment précis.
 + Par exemple, si nous devons valider les champs "e-mail" et "mot de passe", nous ne devons pas valider le nom, car 
@@ -90,3 +88,14 @@ soit une `requête qui renvoie des données` à l'appelant, mais pas les deux.
   de code nécessaire pour travailler dessus.
 + L'`objectif de YAGNI` est de nous faire gagner du temps et de nous concentrer sur les choses les plus importantes de 
   notre `sprint`.
+
+#### Bibliographie :
++ SOLID : https://towardsdatascience.com/solid-coding-in-python-1281392a6a94
++ CQS : https://en.wikipedia.org/wiki/Command%E2%80%93query_separation
++ DRY : 
+  + https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
+  + https://medium.com/@derodu/design-patterns-kiss-dry-tda-yagni-soc-828c112b89ee 
++ KISS : https://medium.com/@derodu/design-patterns-kiss-dry-tda-yagni-soc-828c112b89ee
++ SoC : https://medium.com/@derodu/design-patterns-kiss-dry-tda-yagni-soc-828c112b89ee
++ YAGNI : https://medium.com/@derodu/design-patterns-kiss-dry-tda-yagni-soc-828c112b89ee
+
