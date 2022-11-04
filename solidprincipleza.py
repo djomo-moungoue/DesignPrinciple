@@ -10,10 +10,11 @@ from logza import LogZa
 import numpy as np
 from abc import ABC, abstractmethod
 
-
 """
 ------------------------SOLID blessé--------------------------
 """
+
+
 def do_math_operations_za(list_za: list) -> None:
     """
     Fonction responsable de calculer la moyenne et le maximum.
@@ -24,17 +25,21 @@ def do_math_operations_za(list_za: list) -> None:
     LogZa.log_za("do_math_operations_za calcule le maximum")
     LogZa.log_za(f"Le maximum est : {np.max(list_za)}")
 
+
 """
 ---------------SRP respecté et OCP blessé------------------------
 """
+
 
 def get_mean_za(list_za: list):
     LogZa.log_za("get_mean_za calcule la moyenne")
     LogZa.log_za(f"La moyenne est : {np.mean(list_za)}")
 
+
 def get_max_za(list_za: list):
     LogZa.log_za("get_max_za calcule le maximum")
     LogZa.log_za(f"Le maximum est : {np.max(list_za)}")
+
 
 def main_za(list_za: list):
     LogZa.log_za("main_za calcule la moyenne")
@@ -42,9 +47,11 @@ def main_za(list_za: list):
     LogZa.log_za("main_za calcule la moyenne")
     get_max_za(list_za)
 
+
 """
 --------------------------SRP + OCP--------------------------
 """
+
 
 class OperationZa(ABC):
     """
@@ -83,10 +90,11 @@ class MainZa:
     """
 
     @abstractmethod
-    def get_operations_za(self, list_za):
+    def get_operations_za(self, list_za: list):
         # __subclasses__ trouvera toutes les enfants d'OperationZa
         for operation in OperationZa.__subclasses__():
             operation.do_operation_za(list_za)
+
 
 """
 ----------------------MAIN------------------
