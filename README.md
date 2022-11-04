@@ -10,14 +10,6 @@ soit une `requête qui renvoie des données` à l'appelant, mais pas les deux.
 + "Don't repeat yourself" (DRY) est un principe de développement logiciel visant à réduire la répétition des patrons
   logiciels, en les remplaçant par des abstractions ou en utilisant la normalisation des données pour éviter la redondance.
 + [Bon et mauvais exemple](https://medium.com/@derodu/design-patterns-kiss-dry-tda-yagni-soc-828c112b89ee)
-+ Python : Good Example
-~~~python
-
-~~~
-+ Python : Bad Example
-~~~python
-
-~~~
 
 # KISS : Keep It Simple Stupid
 + Le principe KISS stipule que chaque `méthode`, `classe`, `interface` doit avoir un nom aussi clair que possible et que
@@ -26,27 +18,11 @@ soit une `requête qui renvoie des données` à l'appelant, mais pas les deux.
   + soit via l'`héritage` des attributs, des méthodes de la classe de base
   + soit via la `composition`
 + [Bon et mauvais exemple](https://medium.com/@derodu/design-patterns-kiss-dry-tda-yagni-soc-828c112b89ee)
-+ Python : Good Example
-~~~python
-
-~~~
-+ Python : Bad Example
-~~~python
-
-~~~
 
 # [SoC : Separation of Concern](https://medium.com/@derodu/design-patterns-kiss-dry-tda-yagni-soc-828c112b89ee)
 + Ce principe nous dit de séparer la responsabilité d'une seule classe à cette classe et à cette classe seulement.
 + Les objets ne doivent pas partager ce qu'ils font.
 + Chaque classe doit être unique et séparée des autres.
-+ Python : Good Example
-~~~python
-
-~~~
-+ Python : Bad Example
-~~~python
-
-~~~
 
 # [SOLID : Coding in Python](https://towardsdatascience.com/solid-coding-in-python-1281392a6a94)
 
@@ -94,11 +70,3 @@ les classes de Python). Les principes de `SOLID` sont les suivants :
   de code nécessaire pour travailler dessus.
 + L'`objectif de YAGNI` est de nous faire gagner du temps et de nous concentrer sur les choses les plus importantes de 
   notre `sprint`.
-+ Python : Good Example
-~~~python
-
-~~~
-+ Python : Bad Example
-~~~python
-
-~~~
