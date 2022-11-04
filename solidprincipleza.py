@@ -144,5 +144,5 @@ if __name__ == "__main__":
     main_za.get_operations_za([3, 5, 11, 7, 1])
     print("--------Effectuer une opération spécifique------------")
     main_za.get_one_operation_za([3, 5, 11, 7, 1], MeanZa)
-    print("+++++Extension de OperationZa, avec le calcul de la médiane, sans necessité de modifier le code déjà implémenté+++++++++")
+    print("+++++Extension de OperationZa, avec le calcul de la médiane, sans necessité de modifier un partie du code déjà implémenté+++++++++")
     main_za.get_one_operation_za([3, 5, 11, 7, 1], MedianZa)

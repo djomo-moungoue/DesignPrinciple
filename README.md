@@ -1,4 +1,9 @@
-`Python : Exemples illustrant l'application des principes de conception`
+# Python 3 : Exemples illustrant l'application des principes de conception
+- Je vous recommande d'`exécuter` les exemples pour mieux comprendre les concepts.
+- J'ai `testé` ces exemples et ils fonctionnent tous comme prévu.
+- `N.B.` : 
+  - Tout `commentaire constructif` est le bien venu, parce que Rome n'a été construit en un seul jour. 
+  - Merci d'avance !
 
 # [SOLID : Coding in Python](https://towardsdatascience.com/solid-coding-in-python-1281392a6a94)
 Habituellement, les principes SOLID sont appliqués dans le contexte de la conception orientée objet (par exemple, 
@@ -15,6 +20,7 @@ les classes de Python). Le principe de `SOLID` est composé des 5 principes suiv
   - Cela ne signifie pas que vous ne pouvez pas modifier votre code lorsque les prémisses du code doivent être modifiées, 
     mais que si vous devez ajouter de nouvelles fonctions similaires à celle qui est présente, vous ne devriez pas avoir 
     besoin de modifier d'autres parties du code.
+  - Le résultat est une classe très `flexible`, dont l'entretien nécessite un minimum de temps. 
 - [ ] `LSP` : The Liskov Substitution Principle - le principe de substitution de Liskov
   - Selon ce principe "Les `classes dérivées ou enfants` doivent être substituables à leurs classes de base ou parents". 
   - Ce principe garantit que toute classe qui est l'enfant d'une classe parent doit pouvoir être utilisée à la place de 
